@@ -10,7 +10,7 @@ def handle(req):
     try:
         par = json.loads(req)
     except Exception as e:
-        par = e
+        par = str(e)
 
     return json.dumps({
         "environment": "dev", 
