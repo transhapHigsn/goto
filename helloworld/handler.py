@@ -7,17 +7,13 @@ def handle(req):
         req (str): request body
     """
 
-    body = json.dumps(req)
-    nex = json.loads(body)
-
     try:
         par = json.loads(req)
     except Exception as e:
         par = e
 
     return json.dumps({
-        "body": body,
-        "nex": nex,
+        "environment": "dev", 
         "request": req,
-        "par": par,
+        "parsed_request": par,
     })
