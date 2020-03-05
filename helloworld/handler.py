@@ -10,8 +10,14 @@ def handle(req):
     body = json.dumps(req)
     nex = json.loads(body)
 
-    return {
+    try:
+        par = json.loads(req)
+    except Exception as e:
+        par = e
+
+    return json.dumps({
         "body": body,
         "nex": nex,
-        "request": req
-    }
+        "request": req,
+        "par": par,
+    })
