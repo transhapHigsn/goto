@@ -8,6 +8,10 @@ def handle(req):
     """
 
     body = json.dumps(req)
-    # nex = json.loads(req)
+    nex = json.loads(body)
 
-    return body
+    return {
+        "body": body,
+        "nex": nex,
+        "request": req
+    }
