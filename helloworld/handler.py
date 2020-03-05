@@ -1,4 +1,4 @@
-# 178.128.40.109
+178.128.40.109
 import json
 
 def handle(req):
@@ -8,6 +8,6 @@ def handle(req):
     """
 
     body = json.dumps(req)
-    nex = json.loads(req)
+    # nex = json.loads(req)
 
-    return body, nex
+    return body
